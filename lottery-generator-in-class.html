@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Lottery Generator</title>
+  <title>Quotable Quotes Generator by the Incredible Five</title>
 
   <!-- Added link to the jQuery Library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -15,6 +15,10 @@
   <!-- fonts -->
   <link href="https://fonts.googleapis.com/css?family=Spectral+SC" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+
 
 </head>
 
@@ -35,7 +39,8 @@
       var quotes = ["Programming languages, like pizza, come in only two sizes: too big and too small.", "too busy watering my own grass to check if yours is greener", "Release the kitties.", "Life is like a box of lollipops. It sucks.", "When you reach the end of your rope, tie a knot in it and hang on.",
         "When you reach the end of your rope, tie a knot in it and hang on."];
       var index = 0;
-      var fonts = ["font-family: 'Spectral SC', serif;", "font-family: 'Amatic SC', cursive;"];
+      var fonts = ['"Spectral SC", serif', '"Amatic SC", cursive', '"Roboto Condensed", sans-serif', 'Patua One','"Acme", sans-serif'];
+      var i = 0;
 
       $("#first-button").click(function () {
         var selQuote = "";
@@ -50,9 +55,14 @@
       });
 
       $("#second-button").click(function () {
+        var selFont = "";
+        if (i === fonts.length) {
+          i = 0;
+        }
 
-
-
+        selFont = fonts[i];
+        i++;
+        $('#first-div').css('font-family', selFont);
       });
 
 
