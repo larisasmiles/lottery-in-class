@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Lottery Generator</title>
+
+  <!-- Added link to the jQuery Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Added a link to Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+    crossorigin="anonymous">
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Spectral+SC" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <button type="button" class="btn btn-warning" id="first-button"> New Quote </button>
+  <button type="button" class="btn btn-dark" id="second-button"> New Font</button>
+  <div id=first-div></div>
+
+
+
+
+  <!-- This code serves to let the user click a button which then shows a quote -->
+
+
+  <script>
+    $(document).ready(function () {
+      var quotes = ["Programming languages, like pizza, come in only two sizes: too big and too small.", "too busy watering my own grass to check if yours is greener", "Release the kitties.", "Life is like a box of lollipops. It sucks.", "When you reach the end of your rope, tie a knot in it and hang on.",
+        "When you reach the end of your rope, tie a knot in it and hang on."];
+      var index = 0;
+      var fonts = ["font-family: 'Spectral SC', serif;", "font-family: 'Amatic SC', cursive;"];
+
+      $("#first-button").click(function () {
+        var selQuote = "";
+        if (index === quotes.length) {
+          index = 0;
+        }
+
+        selQuote = quotes[index];
+        index++;
+        $('#first-div').html(selQuote);
+
+      });
+
+      $("#second-button").click(function () {
+
+
+
+      });
+
+
+
+
+    });
+
+  </script>
+
+</body>
+
+</html>
